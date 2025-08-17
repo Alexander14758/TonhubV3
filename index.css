@@ -1,0 +1,93 @@
+body {
+  font-family: sans-serif;
+  background-image: url(toncity.png);
+  background-position: center;
+  padding: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.about {
+  padding: 20px;
+  background-color: rgba(15, 15, 15, 0.1);
+  max-width: 600px;
+  color: #ffff;
+  font-family: Oriitron, sans-serif;
+  margin-top: 200px;
+  font-size: 20px;
+  border-radius: 25px;
+}
+
+h2 {
+  margin-top: 130px;
+}
+
+.curser {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: black;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.crypto-list {
+  list-style: none;
+  padding: 0;
+}
+
+.crypto-list li {
+  margin: 10px 0;
+}
+
+.crypto-list a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: normal;
+  font-size: 18px;
+}
+
+img {
+  width: 350px;
+  border-radius: 16px;
+  opacity: 0;
+}
+m .vault {
+  width: 350px;
+  border-radius: 16px;
+  margin-top: 135px;
+}
+
+.cryptoLogo {
+  width: 24px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+#cryptoLogo1 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.top-right-logo {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 160px;
+  height: auto;
+  z-index: 999;
+  opacity: 1 !important;
+}
