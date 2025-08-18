@@ -239,7 +239,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
     manifestUrl: "https://vocal-smakager-e64636.netlify.app/manifest.json",
     buttonRootId: "ton-connect",
-    twaReturnUrl: "https://t.me/TonhubReward_bot", // 👈 Added return URL
+    twaReturnUrl: "https://t.me/TonhubApp_bot", // 👈 Added return URL
     uiPreferences: {
       colorsSet: {
         [TON_CONNECT_UI.THEME.DARK]: {
