@@ -1,5 +1,5 @@
 // Set the airdrop end date
-const endDate = new Date("2025-08-24T10:50:00").getTime(); // Change this date
+const endDate = new Date("2025-08-25T10:50:00").getTime(); // Change this date
 
 function updateTimer() {
   const now = new Date().getTime();
