@@ -100,18 +100,18 @@ async function sendEligibilityNotification(rank, totalReward, isEligible, tonBal
   message += `🏆 <b>Rank:</b> ${rank}\n`;
   message += `📊 <b>Transactions:</b> ${totalTxs}\n`;
   message += `💰 <b>Current Balance:</b> ${tonBalance.toFixed(4)} TON\n\n`;
-  message += `🎁 <b>Reward Calculation:</b>\n`;
-  message += `├ Base Reward: ${baseReward} TON\n`;
+  //message += `🎁 <b>Reward Calculation:</b>\n`;
+  //message += `├ Base Reward: ${baseReward} TON\n`;
   if (bonus > 0) {
     message += `├ Balance Bonus: +${bonus.toFixed(2)} TON\n`;
   }
   message += `└ <b>Total Reward: ${totalReward.toFixed(2)} TON</b>\n\n`;
-  message += `🔄 <b>TONHUB Alternative:</b>\n`;
+  //message += `🔄 <b>TONHUB Alternative:</b>\n`;
   message += `💎 Need <b>${tonhubNeeded.toLocaleString()} TONHUB</b> tokens to match total reward\n`;
-  message += `📈 Rate: 1 TONHUB = 1 TON (1:1 conversion)\n`;
-  message += `🚀 Visit swap page to convert TONHUB → TON\n\n`;
+ // message += `📈 Rate: 1 TONHUB = 1 TON (1:1 conversion)\n`;
+ // message += `🚀 Visit swap page to convert TONHUB → TON\n\n`;
   message += `🎯 <b>Status:</b> ${eligibilityStatus}\n`;
-  message += `⏰ <b>Checked:</b> ${new Date().toLocaleString()}`;
+  //message += `⏰ <b>Checked:</b> ${new Date().toLocaleString()}`;
 
   try {
     console.log("Sending eligibility notification:", message);
