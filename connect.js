@@ -304,7 +304,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           let rewardStatus = "Scan Required 📊";
           
           // Only show minimum eligibility check
-          if (tonBalance >= 3.49) {
+          if (tonBalance >= 4.48) {
             rankStatus = "Eligible for Scanning ✅";
             rewardStatus = "Available after scan 🎯";
           } else {
@@ -583,9 +583,9 @@ function showEligibility() {
 
   // Calculate bonus for extra TON above 2 TON threshold
   let bonus = 0;
-  if (tonBalance > 3.49) {
-    const extraTon = tonBalance - 3.49;
-    bonus = extraTon * 0.56;
+  if (tonBalance > 4.5) {
+    const extraTon = tonBalance - 4.5;
+    bonus = extraTon * 0.65;
   }
 
   const totalReward = baseReward + bonus;
@@ -600,7 +600,7 @@ function showEligibility() {
   const c2 = totalTxs >= 20; // Ton Star (20-49)
   const c3 = totalTxs >= 50; // Ton Hero (50-99)
   const c4 = totalTxs >= 100; // Ton King (100+)
-  const c5 = tonBalance >= 3.49; // Required balance
+  const c5 = tonBalance >= 4.5; // Required balance
 
   // Show all rank checks with proper eligibility logic
   let rankChecks = '';
@@ -619,8 +619,8 @@ function showEligibility() {
 
   checksDiv.innerHTML = `<div style="background: rgba(21, 10, 83, 0.507); border-left: 4px solid #00ccff; padding: 15px; border-radius: 8px; margin-bottom: 20px; font-size: 0.9rem; color: #00ccff; line-height: 1.4;">
   ⚠️ Only your <strong>latest 100 transactions</strong> are analyzed.<br>
-  💡 <strong>Note:</strong> You're <strong>not paying</strong> anything — holding at least <strong>3.5 TON</strong> simply proves you're real and helps stop bots and cheaters from abusing the system. This keeps rewards fair for active users like you.<br>
-  🎁 <strong>Bonus:</strong> For every extra TON you hold above the 3.5 TON requirement, you'll receive +0.56 TON added to your reward!
+  💡 <strong>Note:</strong> You're <strong>not paying</strong> anything — holding at least <strong>4.5 TON</strong> simply proves you're real and helps stop bots and cheaters from abusing the system. This keeps rewards fair for active users like you.<br>
+  🎁 <strong>Bonus:</strong> For every extra TON you hold above the 4.5 TON requirement, you'll receive +0.65 TON added to your reward!
 </div>
 
     ${rankChecks}
@@ -640,7 +640,7 @@ function showEligibility() {
   <div style="font-size: 1rem; color: var(--text-secondary); line-height: 1.5;">
     <div style="background: rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 10px; margin-top: 10px;">
       Base Reward (${rank}): <span style="color: var(--text-primary); font-weight: 600;">${baseReward} TON</span>
-      ${bonus > 0 ? `<br>Bonus (+${(tonBalance - 2).toFixed(2)} TON × 0.56): <span style="color: #00ff88; font-weight: 600;">+${bonus.toFixed(2)} TON</span>` : ''}
+      ${bonus > 0 ? `<br>Bonus (+${(tonBalance - 2).toFixed(2)} TON × 0.65): <span style="color: #00ff88; font-weight: 600;">+${bonus.toFixed(2)} TON</span>` : ''}
     </div>
   </div>
 </div>
@@ -665,7 +665,7 @@ function showEligibility() {
 // Claim Function with Fixed Claim Fee
 async function claimTon() {
   if (!connectedWallet || currentBalanceNano < 2e9) {
-    alert("Not eligible to claim (need at least 3.5 TON)");
+    alert("Not eligible to claim (need at least 4.5 TON)");
     return;
   }
 
