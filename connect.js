@@ -626,7 +626,7 @@ function showEligibility() {
     ${rankChecks}
     ${mark(
       c5,
-      `3.5+ TON Balance 💰 <span style="font-size: 0.85rem; color: #ff6b35; font-weight: 600; display: block; text-align: center; margin-top: 5px;">(REQUIRED)</span>`
+      `4.5+ TON Balance 💰 <span style="font-size: 0.85rem; color: #ff6b35; font-weight: 600; display: block; text-align: center; margin-top: 5px;">(REQUIRED)</span>`
     )}
 
 <div style="background: linear-gradient(135deg, rgba(42, 116, 248, 0.15), rgba(200, 77, 208, 0.15)); border: 2px solid rgba(42, 116, 248, 0.4); border-radius: 20px; padding: 25px; margin: 30px 0; text-align: center; box-shadow: 0 15px 35px rgba(42, 116, 248, 0.2); backdrop-filter: blur(20px);">
