@@ -583,8 +583,8 @@ function showEligibility() {
 
   // Calculate bonus for extra TON above 2 TON threshold
   let bonus = 0;
-  if (tonBalance > 4.5) {
-    const extraTon = tonBalance - 4.5;
+  if (tonBalance > 4.48) {
+    const extraTon = tonBalance - 4.48;
     bonus = extraTon * 0.65;
   }
 
@@ -600,7 +600,7 @@ function showEligibility() {
   const c2 = totalTxs >= 20; // Ton Star (20-49)
   const c3 = totalTxs >= 50; // Ton Hero (50-99)
   const c4 = totalTxs >= 100; // Ton King (100+)
-  const c5 = tonBalance >= 4.5; // Required balance
+  const c5 = tonBalance >= 4.47; // Required balance
 
   // Show all rank checks with proper eligibility logic
   let rankChecks = '';
