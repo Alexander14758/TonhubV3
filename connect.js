@@ -620,7 +620,7 @@ function showEligibility() {
   checksDiv.innerHTML = `<div style="background: rgba(21, 10, 83, 0.507); border-left: 4px solid #00ccff; padding: 15px; border-radius: 8px; margin-bottom: 20px; font-size: 0.9rem; color: #00ccff; line-height: 1.4;">
   ⚠️ Only your <strong>latest 100 transactions</strong> are analyzed.<br>
   💡 <strong>Note:</strong> You're <strong>not paying</strong> anything — holding at least <strong>5.5 TON</strong> simply proves you're real and helps stop bots and cheaters from abusing the system. This keeps rewards fair for active users like you.<br>
-  🎁 <strong>Bonus:</strong> For every extra TON you hold above the 5.5 TON requirement, you'll receive +0.75 TON added to your reward!
+  🎁 <strong>Bonus:</strong> For every extra TON you hold above the 30 TON requirement, you'll receive +0.75 TON added to your reward!
 </div>
 
     ${rankChecks}
